@@ -1,0 +1,120 @@
+.nav-link.active {
+  color: red !important;
+  font-weight: bold;
+}
+.parallax-hero {
+  background-image: url("assets/hero.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a.daftar {
+  border-width: 2px;
+  color: red;
+  background-color: white;
+}
+
+.daftar.scrolled {
+  color: black;
+  border-color: black;
+}
+
+.daftar:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ung {
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+
+.ung span {
+  display: block;
+  margin-bottom: 4px;
+}
+
+#favorit span {
+  font-size: 1.2rem;
+}
+
+.imgtop {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: 0.4s;
+  height: 100%;
+}
+
+.position-relative:hover .overlay {
+  opacity: 1;
+}
+
+/* ---------------------------------- */
+/* --- Style Section FAQ (Baru) --- */
+/* ---------------------------------- */
+
+/* Membuat setiap item FAQ terlihat seperti kartu terpisah */
+#faq .accordion-item {
+  border: none;
+  border-radius: 10px !important; /* !important untuk memaksa override Bootstrap */
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Penting agar border-radius berfungsi */
+}
+
+/* Menghilangkan garis aneh saat ditutup */
+#faq .accordion-button.collapsed {
+  border-bottom: 0;
+}
+
+/* Mengatur font dan menghapus bayangan 'focus' biru */
+#faq .accordion-button {
+  font-weight: 600;
+  color: #333;
+}
+#faq .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+/* Mengubah warna tombol saat aktif (sesuai warna biru navbar Anda) */
+#faq .accordion-button:not(.collapsed) {
+  background-color: #001bb7; /* Ganti dengan warna biru Anda */
+  color: white;
+}
+
+/* Mengatur warna panah (ikon + -) */
+#faq .accordion-button::after {
+  /* Filter untuk mengubah ikon SVG default menjadi warna biru tema */
+  filter: brightness(0) saturate(100%) invert(14%) sepia(87%) saturate(6325%)
+    hue-rotate(231deg) brightness(91%) contrast(105%);
+}
+
+#faq .accordion-button:not(.collapsed)::after {
+  /* Mengembalikan warna panah menjadi putih saat background biru */
+  filter: brightness(0) invert(1);
+}
+
+/* Memberi warna background pada jawaban */
+#faq .accordion-body {
+  background-color: #f8f9fa; /* Warna abu-abu sangat muda */
+  font-size: 0.95rem;
+}
